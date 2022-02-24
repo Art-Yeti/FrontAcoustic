@@ -1,0 +1,15 @@
+mixin input(data)
+
+    - var name = data.name;
+    - var inputPH = data.inputPH;
+    - var required = data.required || false;
+    - var inputType = data.inputType;
+
+    if inputType === 'text'
+        input.input(type='text' name=name placeholder=inputPH required)
+    else if inputType === 'tel'
+        input.input(type='tel' name=name placeholder=inputPH)
+    else if inputType === 'email'
+        input.input(type='email' name=name placeholder=inputPH required)
+    else if inputType === 'textarea'
+        textarea.textarea(name=name placeholder=inputPH required)

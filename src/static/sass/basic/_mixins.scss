@@ -1,0 +1,165 @@
+// Mixins.
+@mixin nl {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style: none;
+  list-style-position: outside;
+}
+
+@mixin cf {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+  .lt-ie8 & {
+    zoom: 1;
+  }
+}
+
+@mixin blocks-justify {
+  text-align: justify;
+  text-justify: newspaper;
+}
+
+// You can add your own mixins here:
+@mixin flex($way, $vposition, $hposition) {
+  display: flex;
+  flex-direction: $way;
+  justify-content: $vposition;
+  align-items: $hposition;
+}
+
+//@mixin phone() {
+//    @media screen and (max-width: 320px) {
+//        @content;
+//    }
+//}
+@mixin tablet() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: 1240px) {
+    @content;
+  }
+}
+
+@mixin _374 {
+  @media screen and (max-width: 374px) {
+    @content;
+  }
+}
+
+@mixin _420 {
+  @media screen and (max-width: 420px) {
+    @content;
+  }
+}
+
+@mixin _600 {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin _700 {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin _768 {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin _900 {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin _1000 {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin _1024 {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin _1200 {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin _1368 {
+  @media screen and (max-width: 1368px) {
+    @content;
+  }
+}
+
+@mixin _1400 {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin _1600 {
+  @media screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin _1800 {
+  @media screen and (max-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin mainBtn() {
+  padding: 12px 34px;
+  background: linear-gradient(99.53deg, #3371cc 0%, #1c3e70 100%);
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(0deg, #3371cc, #3371cc),
+      linear-gradient(99.53deg, #3371cc 0%, #1c3e70 100%);
+    border-radius: 30px;
+    transition: ease-out 0.2s;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    pointer-events: none;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+}

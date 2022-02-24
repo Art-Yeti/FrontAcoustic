@@ -1,0 +1,12 @@
+mixin end(data)
+  .beforeBodyEnd(style="display: none")
+
+    script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+
+    script(src="../js/app.min.js")
+    script(src="../js/shared.min.js")
+
+  //- ↓↓↓↓↓↓↓ Разкоммитить при подключении svg-спрайита ↓↓↓↓↓↓↓
+
+  //- .svg-sprite(style="display: none")
+    include ../../../build/img/symbol/svg-sprite.svg

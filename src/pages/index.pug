@@ -1,0 +1,24 @@
+extends template/_layout
+
+block vars
+
+    - var title = "Все страницы";
+
+block content
+    -
+        var listPage = [
+            {
+                title: 'Страница записи',
+                link: 'main',
+                progress: '0'
+            }
+        ];
+
+    .content
+        ul
+             each val, index in listPage
+                li(style="margin-bottom: 10px;")
+                    a(href=`/tpl/${val.link}.html`)= val.title
+                      p(style="color: black; font-size: .8em;") #{val.progress}% сделано
+
+

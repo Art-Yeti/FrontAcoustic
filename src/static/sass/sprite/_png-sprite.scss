@@ -1,0 +1,200 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$sprite-bad-house-1-name: 'sprite-bad_house_1';
+$sprite-bad-house-1-x: 0px;
+$sprite-bad-house-1-y: 462px;
+$sprite-bad-house-1-offset-x: 0px;
+$sprite-bad-house-1-offset-y: -462px;
+$sprite-bad-house-1-width: 171px;
+$sprite-bad-house-1-height: 152px;
+$sprite-bad-house-1-total-width: 1457px;
+$sprite-bad-house-1-total-height: 743px;
+$sprite-bad-house-1-image: 'img/sprite/png-sprite.png';
+$sprite-bad-house-1: (0px, 462px, 0px, -462px, 171px, 152px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-bad_house_1', );
+$sprite-bad-house-2-name: 'sprite-bad_house_2';
+$sprite-bad-house-2-x: 191px;
+$sprite-bad-house-2-y: 462px;
+$sprite-bad-house-2-offset-x: -191px;
+$sprite-bad-house-2-offset-y: -462px;
+$sprite-bad-house-2-width: 171px;
+$sprite-bad-house-2-height: 144px;
+$sprite-bad-house-2-total-width: 1457px;
+$sprite-bad-house-2-total-height: 743px;
+$sprite-bad-house-2-image: 'img/sprite/png-sprite.png';
+$sprite-bad-house-2: (191px, 462px, -191px, -462px, 171px, 144px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-bad_house_2', );
+$sprite-bad-house-3-name: 'sprite-bad_house_3';
+$sprite-bad-house-3-x: 382px;
+$sprite-bad-house-3-y: 462px;
+$sprite-bad-house-3-offset-x: -382px;
+$sprite-bad-house-3-offset-y: -462px;
+$sprite-bad-house-3-width: 171px;
+$sprite-bad-house-3-height: 144px;
+$sprite-bad-house-3-total-width: 1457px;
+$sprite-bad-house-3-total-height: 743px;
+$sprite-bad-house-3-image: 'img/sprite/png-sprite.png';
+$sprite-bad-house-3: (382px, 462px, -382px, -462px, 171px, 144px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-bad_house_3', );
+$sprite-bad-house-4-name: 'sprite-bad_house_4';
+$sprite-bad-house-4-x: 573px;
+$sprite-bad-house-4-y: 462px;
+$sprite-bad-house-4-offset-x: -573px;
+$sprite-bad-house-4-offset-y: -462px;
+$sprite-bad-house-4-width: 171px;
+$sprite-bad-house-4-height: 143px;
+$sprite-bad-house-4-total-width: 1457px;
+$sprite-bad-house-4-total-height: 743px;
+$sprite-bad-house-4-image: 'img/sprite/png-sprite.png';
+$sprite-bad-house-4: (573px, 462px, -573px, -462px, 171px, 143px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-bad_house_4', );
+$sprite-button-next-name: 'sprite-button-next';
+$sprite-button-next-x: 764px;
+$sprite-button-next-y: 533px;
+$sprite-button-next-offset-x: -764px;
+$sprite-button-next-offset-y: -533px;
+$sprite-button-next-width: 38px;
+$sprite-button-next-height: 69px;
+$sprite-button-next-total-width: 1457px;
+$sprite-button-next-total-height: 743px;
+$sprite-button-next-image: 'img/sprite/png-sprite.png';
+$sprite-button-next: (764px, 533px, -764px, -533px, 38px, 69px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-button-next', );
+$sprite-button-prev-name: 'sprite-button-prev';
+$sprite-button-prev-x: 822px;
+$sprite-button-prev-y: 533px;
+$sprite-button-prev-offset-x: -822px;
+$sprite-button-prev-offset-y: -533px;
+$sprite-button-prev-width: 38px;
+$sprite-button-prev-height: 69px;
+$sprite-button-prev-total-width: 1457px;
+$sprite-button-prev-total-height: 743px;
+$sprite-button-prev-image: 'img/sprite/png-sprite.png';
+$sprite-button-prev: (822px, 533px, -822px, -533px, 38px, 69px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-button-prev', );
+$sprite-calc-img-name: 'sprite-calc_img';
+$sprite-calc-img-x: 893px;
+$sprite-calc-img-y: 0px;
+$sprite-calc-img-offset-x: -893px;
+$sprite-calc-img-offset-y: 0px;
+$sprite-calc-img-width: 564px;
+$sprite-calc-img-height: 423px;
+$sprite-calc-img-total-width: 1457px;
+$sprite-calc-img-total-height: 743px;
+$sprite-calc-img-image: 'img/sprite/png-sprite.png';
+$sprite-calc-img: (893px, 0px, -893px, 0px, 564px, 423px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-calc_img', );
+$sprite-form-svai-name: 'sprite-form_svai';
+$sprite-form-svai-x: 0px;
+$sprite-form-svai-y: 0px;
+$sprite-form-svai-offset-x: 0px;
+$sprite-form-svai-offset-y: 0px;
+$sprite-form-svai-width: 873px;
+$sprite-form-svai-height: 442px;
+$sprite-form-svai-total-width: 1457px;
+$sprite-form-svai-total-height: 743px;
+$sprite-form-svai-image: 'img/sprite/png-sprite.png';
+$sprite-form-svai: (0px, 0px, 0px, 0px, 873px, 442px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-form_svai', );
+$sprite-logo-name: 'sprite-logo';
+$sprite-logo-x: 764px;
+$sprite-logo-y: 462px;
+$sprite-logo-offset-x: -764px;
+$sprite-logo-offset-y: -462px;
+$sprite-logo-width: 248px;
+$sprite-logo-height: 51px;
+$sprite-logo-total-width: 1457px;
+$sprite-logo-total-height: 743px;
+$sprite-logo-image: 'img/sprite/png-sprite.png';
+$sprite-logo: (764px, 462px, -764px, -462px, 248px, 51px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-logo', );
+$sprite-num-bg-icon-name: 'sprite-num_bg_icon';
+$sprite-num-bg-icon-x: 129px;
+$sprite-num-bg-icon-y: 634px;
+$sprite-num-bg-icon-offset-x: -129px;
+$sprite-num-bg-icon-offset-y: -634px;
+$sprite-num-bg-icon-width: 76px;
+$sprite-num-bg-icon-height: 75px;
+$sprite-num-bg-icon-total-width: 1457px;
+$sprite-num-bg-icon-total-height: 743px;
+$sprite-num-bg-icon-image: 'img/sprite/png-sprite.png';
+$sprite-num-bg-icon: (129px, 634px, -129px, -634px, 76px, 75px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-num_bg_icon', );
+$sprite-worker-name: 'sprite-worker';
+$sprite-worker-x: 0px;
+$sprite-worker-y: 634px;
+$sprite-worker-offset-x: 0px;
+$sprite-worker-offset-y: -634px;
+$sprite-worker-width: 109px;
+$sprite-worker-height: 109px;
+$sprite-worker-total-width: 1457px;
+$sprite-worker-total-height: 743px;
+$sprite-worker-image: 'img/sprite/png-sprite.png';
+$sprite-worker: (0px, 634px, 0px, -634px, 109px, 109px, 1457px, 743px, 'img/sprite/png-sprite.png', 'sprite-worker', );
+$spritesheet-width: 1457px;
+$spritesheet-height: 743px;
+$spritesheet-image: 'img/sprite/png-sprite.png';
+$spritesheet-sprites: ($sprite-bad-house-1, $sprite-bad-house-2, $sprite-bad-house-3, $sprite-bad-house-4, $sprite-button-next, $sprite-button-prev, $sprite-calc-img, $sprite-form-svai, $sprite-logo, $sprite-num-bg-icon, $sprite-worker, );
+$spritesheet: (1457px, 743px, 'img/sprite/png-sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

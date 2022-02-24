@@ -1,0 +1,62 @@
+
+input{
+  outline: none !important;
+}
+
+button{
+  outline: none !important;
+}
+
+textarea{
+  outline: none !important;
+}
+
+/*input:valid {
+  color: green;
+}
+
+input:invalid {
+  color: red;
+}*/
+.contactForm__form.validate input:invalid,
+.contactForm__form.validate textarea:invalid{
+
+  color: #c0392b;
+
+  &::-webkit-input-placeholder {color:#c0392b;}
+  &::-moz-placeholder          {color:#c0392b;}/* Firefox 19+ */
+  &:-moz-placeholder           {color:#c0392b;}/* Firefox 18- */
+  &:-ms-input-placeholder      {color:#c0392b;}
+
+}
+
+input.input {
+  display: block;
+  width: 100%;
+  height: 5rem;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 1.5rem;
+  border: 0;
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+}
+
+textarea.textarea{
+  width: 100%;
+  height: 27rem;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 1.5rem;
+  border: 0;
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+}
