@@ -2,8 +2,10 @@ import article_slider from "../../components/Sections/article-slider/article-sli
 
 import text_content from "../../components/Sections/text-content/text-content";
 
+import { Fancybox, Carousel } from "@fancyapps/ui";
+
 function initAll() {
-    text_content(Swiper)
+    // text_content(Swiper)
 
     const article_slisder = ".js-article-slider";
 
@@ -12,8 +14,8 @@ function initAll() {
             slidesPerView: 1,
             loop: true,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-btn-next',
+                prevEl: '.swiper-btn-prev',
             },
             breakpoints: {
                 768: {
@@ -23,6 +25,37 @@ function initAll() {
 
           });
     }
+
+
+    const mainCarousel = new Carousel(document.querySelector(".js-text-content-mainCarousel"), {
+        Dots: false,
+    });
+
+    const thumbCarousel = new Carousel(document.querySelector(".js-text-content-thumbCarousel"), {
+        Sync: {
+            target: mainCarousel,
+            friction: 0,
+        },
+        Dots: false,
+        Navigation: false,
+        center: true,
+        slidesPerPage: 1,
+        infinite: false,
+    });
+    
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        Toolbar: false,
+        closeButton: "top",
+        Carousel: {
+            on: {
+            change: (that) => {
+                mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
+                friction: 0,
+                });
+            },
+            },
+        },
+    });
 }
 
 function ready(fn) {
