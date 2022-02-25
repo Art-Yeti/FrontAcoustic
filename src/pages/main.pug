@@ -1,6 +1,9 @@
 extends template/_layout
 
 //- include ../components/Common/header/header
+include ../components/Sections/text-content/text-content
+include ../components/Sections/indicator/indicator
+include ../components/Sections/video/video
 //- include ../components/Common/footer/footer
 
 block vars
@@ -9,6 +12,11 @@ block vars
 
 block content
     //- +header()
+
+    main.main
+        +text-content()
+        +indicator()
+        +video()
 
     //- +footer()
 

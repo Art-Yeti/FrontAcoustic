@@ -1,0 +1,26 @@
+mixin indicator(data)
+    section.indicator.bg-black
+        .container  
+            ul
+                li
+                    img.-time(src="/img/svg/time-reverb.svg", alt="time-reverb.")
+                    p 
+                        |время реверберации
+                        br
+                        |в пределах 
+                        br
+                        |1 секунды
+
+                li
+                    img.-noize(src="/img/svg/level-noize.svg", alt="time-reverb.")
+                    p 
+                        |уровень проникающего
+                        br
+                        |внешнего шума
+
+                li
+                    img.-sound(src="/img/svg/level-sound.svg", alt="time-reverb.")
+                    p 
+                        |максимальный 
+                        br
+                        |уровень звука

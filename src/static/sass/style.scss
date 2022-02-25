@@ -2,3 +2,57 @@
 @import "node_modules/jquery.scrollbar/sass/jquery.scrollbar.scss";
 @import "src/static/sass/swiper-bundle.scss"; //переименовал в scss
 @import "src/static/sass/nouislider.scss";
+
+
+html, 
+body {
+    min-width: 320px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #000;
+
+    @include _768 {
+        font-size: 18px;
+    }
+
+    @include _576 {
+        font-size: 16px;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1140px;
+
+    @include _576 {
+        padding:  0 10px;
+    }
+}
+
+h2 {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 25px;
+    color: #25282E;
+
+    @include _768 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    @include _576 {
+        padding:  0 10px;
+    }
+}
+
+.bg-black {
+    background: #25282E;
+
+    h2 {
+        color: #FFF;
+    }
+        
+}

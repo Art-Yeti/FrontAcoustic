@@ -1,0 +1,30 @@
+.video {
+    padding: 60px 0;
+    margin-bottom: 60px;
+
+    @include _576 {
+        margin-bottom: 40px;
+        padding: 40px 0;
+    }
+}
+
+.video__modal {
+    margin: 0 auto;
+    width: 895px;
+    height: 502px;
+
+    @include _1024 {
+        width: 464px;
+        height: 287px;
+    }
+
+    @include _576 {
+        width: 100%;
+        height: 168px;
+    }
+}
+
+.video__modal iframe {
+    width: 100%;
+    height: 100%;
+}

@@ -63,6 +63,12 @@
   }
 }
 
+@mixin _576 {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
 @mixin _600 {
   @media screen and (max-width: 600px) {
     @content;
