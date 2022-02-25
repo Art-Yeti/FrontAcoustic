@@ -1,0 +1,5 @@
+mixin path(data)
+    ul.paths
+        each el in data 
+            li.paths__item 
+                a(href="/").paths__item-link !{el}

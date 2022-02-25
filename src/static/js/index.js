@@ -1,7 +1,9 @@
 import article_slider from "../../components/Sections/article-slider/article-slider";
 
+import text_content from "../../components/Sections/text-content/text-content";
 
-$(document).ready(function () {
+function initAll() {
+    text_content(Swiper)
 
     const article_slisder = ".js-article-slider";
 
@@ -21,5 +23,15 @@ $(document).ready(function () {
 
           });
     }
+}
 
-})
+function ready(fn) {
+    if (document.readyState != "loading") {
+        fn();
+        console.log('1');
+    } else {
+        document.addEventListener("DOMContentLoaded", fn);
+    }
+}
+
+ready(initAll);
