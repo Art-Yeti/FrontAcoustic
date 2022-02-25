@@ -2,3 +2,91 @@
 @import "node_modules/jquery.scrollbar/sass/jquery.scrollbar.scss";
 @import "src/static/sass/swiper-bundle.scss"; //переименовал в scss
 @import "src/static/sass/nouislider.scss";
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    box-sizing: border-box;
+    height: 100%;
+    overflow-x: hidden;
+  
+    font-family: Roboto, sans-serif;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  h1,h2,h3{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev{
+    display: block;
+    position: absolute;
+    top: 160px;
+    height: 40px;
+    width: 20px;
+    left: -15px;
+  
+    @media (max-width: 1100px) {
+      top: 110px;
+    }
+  
+    @media (max-width: 768px) {
+      left: 0;
+    }
+  
+    &::before,
+    &::after{
+      display: block;
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 40px;
+      background-color: #C4C4C4;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 3px;
+  
+      @media (max-width: 1100px) {
+        width: 4px;
+        height: 30px;
+      }
+    }
+  
+    &::before{
+      transform: rotate(40deg) translateY(-45%);
+    }
+  
+    &::after{
+      transform: rotate(-40deg) translateY(45%);
+    }
+  }
+  
+  .swiper-button-next{
+  
+    left: unset;
+    right: -15px;
+  
+    @media (max-width: 768px) {
+      right: 0;
+    }
+  
+    &::before{
+      transform: rotate(40deg) translateY(45%);
+    }
+  
+    &::after{
+      transform: rotate(-40deg) translateY(-45%);
+    }
+  }
+  
+  

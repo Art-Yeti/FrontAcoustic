@@ -3,12 +3,18 @@ extends template/_layout
 //- include ../components/Common/header/header
 //- include ../components/Common/footer/footer
 
+include ../components/Sections/article-slider/article-slider
+include ../components/Sections/gallery-tile/gallery-tile
+
 block vars
     - var title = "Страница записи";
     //- - var bodyclass = 'page-main';
 
 block content
     //- +header()
+
+    +article-slider()
+    +gallery-tile()
 
     //- +footer()
 
