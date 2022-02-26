@@ -26,6 +26,11 @@
 //         font-size: 16px;
 //     }
 //   }
+
+.fancybox__nav .carousel__button.is-next, 
+.fancybox__nav .carousel__button.is-prev {
+    transform: translateY(-10%);
+}
   
 .container__bb-page{
 
@@ -103,8 +108,7 @@
     @include _1100 {
         left: 0;
     }
-}
-  
+} 
 
 .spec-container {
     margin: 0 auto;

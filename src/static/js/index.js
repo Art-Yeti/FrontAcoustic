@@ -1,6 +1,6 @@
-import article_slider from "../../components/Sections/article-slider/article-slider";
+// import article_slider from "../../components/Sections/article-slider/article-slider";
 
-import text_content from "../../components/Sections/text-content/text-content";
+// import text_content from "../../components/Sections/text-content/text-content";
 
 import { Fancybox, Carousel } from "@fancyapps/ui";
 
@@ -46,6 +46,8 @@ function initAll() {
     Fancybox.bind('[data-fancybox="gallery"]', {
         Toolbar: false,
         closeButton: "top",
+        arrows: false,
+        autoFocus: true,
         Carousel: {
             on: {
             change: (that) => {
