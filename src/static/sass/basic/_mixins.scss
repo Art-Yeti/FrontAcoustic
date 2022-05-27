@@ -87,6 +87,12 @@
   }
 }
 
+@mixin _855 {
+  @media screen and (max-width: 855px) {
+    @content;
+  }
+}
+
 @mixin _900 {
   @media screen and (max-width: 900px) {
     @content;

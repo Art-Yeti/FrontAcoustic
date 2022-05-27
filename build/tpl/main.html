@@ -8,7 +8,7 @@
     <meta content="telephone=no" name="format-detection"/>
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Страница записи</title>
+    <title>Frontacoustic</title>
     <link rel="stylesheet" href="../template_styles.css"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png"/>
@@ -21,6 +21,104 @@
   </head>
   <body class="page">
     <div class="page__wrapper">
+      <header class="header js-header">
+        <div class="header__top"> 
+          <div class="header__container"><a class="header__top-logo logo-link" href="/"> <img class="logo-link__img" src="../img/logo/logo.png" alt="logo"/></a>
+            <button class="header__top-search search-btn js-search-btn"><img class="search-btn__img" src="../img/svg/zoom-icon.png" alt="search"/></button>
+            <button class="header__top-burger burger-btn js-burger-btn"><span></span></button>
+            <nav class="header__top-nav js-header-nav">
+              <div class="header__top-nav-mask js-header-mask"></div>
+              <div class="header__top-nav-wrapper js-header-menu-wrapper">
+                <ul class="header__top-nav-list header-top-menu js-header-menu">
+                  <li class="header-top-menu__item js-header-menu-tab">
+                    <button class="header-top-menu__item-btn js-header-menu-tab-trigger">Услуги</button>
+                    <div class="header-top-menu__item-submenu js-header-menu-tab-content header-top-submenu">
+                      <button class="header-top-submenu__back-btn js-header-menu-back-btn">Назад</button>
+                      <h3 class="header-top-submenu__title">Услуги</h3>
+                      <ul class="header-top-menu__item-submenu-list header-top-submenu__list js-header-menu-track">
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Услуги</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Услуги</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Услуги</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Услуги</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Услуги</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Услуги</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Услуги</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Услуги</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="header-top-menu__item js-header-menu-tab">
+                    <button class="header-top-menu__item-btn js-header-menu-tab-trigger">Типовые проблемы</button>
+                    <div class="header-top-menu__item-submenu js-header-menu-tab-content header-top-submenu">
+                      <button class="header-top-submenu__back-btn js-header-menu-back-btn">Назад</button>
+                      <h3 class="header-top-submenu__title">Типовые проблемы</h3>
+                      <ul class="header-top-menu__item-submenu-list header-top-submenu__list js-header-menu-track">
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Типовые проблемы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Типовые проблемы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Типовые проблемы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Типовые проблемы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Типовые проблемы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Типовые проблемы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Типовые проблемы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Типовые проблемы</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="header-top-menu__item js-header-menu-tab">
+                    <button class="header-top-menu__item-btn js-header-menu-tab-trigger">Офисы</button>
+                    <div class="header-top-menu__item-submenu js-header-menu-tab-content header-top-submenu">
+                      <button class="header-top-submenu__back-btn js-header-menu-back-btn">Назад</button>
+                      <h3 class="header-top-submenu__title">Офисы</h3>
+                      <ul class="header-top-menu__item-submenu-list header-top-submenu__list js-header-menu-track">
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <ul class="header__top-nav-contacts contacts-list"> 
+                <li class="contacts-list__item"> <a class="contacts-list__item-link" href="tel:88126057095">+7-812-605-70-95</a></li>
+                <li class="contacts-list__item"> <a class="contacts-list__item-link contacts-list__item-link--grey" href="mailto:info@frontacoustic.ru">info@frontacoustic.ru</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__container">
+            <ul class="header__bottom-menu header-bottom-menu"> 
+              <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Готовые решения</a></li>
+              <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Материалы</a></li>
+              <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Звукоизоляция</a></li>
+              <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Акустика</a></li>
+              <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Виброизоляция</a></li>
+              <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Наши проекты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
       <main class="main">
         <sections class="text-content"> 
           <div class="container"> 
@@ -32,26 +130,26 @@
               <div class="text-content__slider-container">
                 <div class="text-content__slider js-text-content-slider">
                   <div class="swiper-wrapper"> 
-                    <div class="swiper-slide"><img src="/img/text-content-slide-1.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-2.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-3.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-4.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-5.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-6.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-7.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-1.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-2.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-3.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-4.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-5.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-6.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-7.png"/></div>
                   </div>
                   <div class="swiper-button swiper-button-next"></div>
                   <div class="swiper-button swiper-button-prev"></div>
                 </div>
                 <div class="text-content__slider-preview js-text-content-slider-preview" thumbsSlider="">
                   <div class="swiper-wrapper"> 
-                    <div class="swiper-slide"><img src="/img/text-content-slide-1.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-2.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-3.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-4.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-5.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-6.png"/></div>
-                    <div class="swiper-slide"><img src="/img/text-content-slide-7.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-1.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-2.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-3.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-4.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-5.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-6.png"/></div>
+                    <div class="swiper-slide"><img src="../img/text-content-slide-7.png"/></div>
                   </div>
                 </div>
               </div>
@@ -110,6 +208,69 @@
           </div>
         </section>
       </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__container footer__top-container">
+            <nav class="footer__top-menu footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__list-item footer-tab js-menu-tab">
+                  <h3 class="footer-tab__title js-menu-tab-trigger">Покупателям</h3>
+                  <ul class="footer-tab__list js-menu-tab-content"> 
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Прайс-лист</a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Покупка и возврат</a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Инструкции по монтажу</a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Доставка</a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Ответы на вопросы</a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Тест</a></li>
+                  </ul>
+                </li>
+                <li class="footer-menu__list-item footer-tab js-menu-tab">
+                  <h3 class="footer-tab__title js-menu-tab-trigger">О нас</h3>
+                  <ul class="footer-tab__list js-menu-tab-content"> 
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">О Компании</a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Новости</a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Наши работы</a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Партерам</a></li>
+                  </ul>
+                </li>
+                <li class="footer-menu__list-item footer-tab js-menu-tab">
+                  <h3 class="footer-tab__title js-menu-tab-trigger">Наши услуги</h3>
+                  <ul class="footer-tab__list js-menu-tab-content"> 
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция стен </a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция под обои </a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция потолка  </a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция пола  </a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция под ламинат </a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция перегородок  </a></li>
+                  </ul>
+                </li>
+                <li class="footer-menu__list-item footer-tab footer-tab--opened">
+                  <h3 class="footer-tab__title js-menu-tab-trigger">Контакты</h3>
+                  <ul class="footer-tab__list"> 
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="tel:88126057095">+7-812-605-70-95</a></li>
+                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="mailto:info@frontacoustic.ru">info@frontacoustic.ru</a></li>
+                    <li class="footer-tab__list-item"> 
+                      <address class="footer-tab__list-item-address">
+                         ООО "Фронт Акустик"<br/>196084, Россия, Санкт-Петербург,<br/>Детский переулок д. 5, офис 327 удобная парковка<br/>отгружаем по всему СЗФО</address>
+                      <button class="footer-tab__list-item-map js-open-map">На карте</button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <ul class="footer__top-social social-list"> 
+              <li class="social-list__item"> <a class="social-list__item-link" href="/"><img class="social-list__item-link-img" src="/img/svg/vk-icon.svg" alt="vk"/></a></li>
+              <li class="social-list__item"> <a class="social-list__item-link" href="/"><img class="social-list__item-link-img" src="/img/svg/youtube-icon.svg" alt="youtube"/></a></li>
+              <li class="social-list__item"> <a class="social-list__item-link" href="/"><img class="social-list__item-link-img" src="/img/svg/youtube-icon.svg" alt="youtube"/></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <div class="footer__container footer__copyright-container"><span class="footer__copyright-text">
+               Copyright © 2013-2021 Фронт Акустик. Все права защищены.</span><span class="footer__copyright-text">
+               При полном или частичном использовании материалов с сайта ссылка на источник обязательна.</span><a class="footer__copyright-privacy-policy" href="/">Политика конфиденциальности</a></div>
+        </div>
+      </footer>
     </div>
     <div class="beforeBodyEnd" style="display: none">
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

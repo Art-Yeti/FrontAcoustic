@@ -1,9 +1,23 @@
-import Swiper from "swiper/swiper-bundle.min";
+// ФУНКЦИИ
+import calcWidthScrollbar from "./assets/_calcWidthScrollbar";
 
-import text_content from "../../components/Sections/text-content/text-content";
+// КОМПОНЕНТЫ
+
+import header from "./components/header";
+import footer from "./components/footer";
+import sliders from "./components/sliders";
 
 function initAll() {
-    text_content(Swiper)
+    // задаем значение padding-right для исключения дерганья заднего фона при overflow hidden для body
+    document.documentElement.style.setProperty('--padding-right', `${calcWidthScrollbar()}px`);
+
+    window.addEventListener('orientationchange', () => {
+    document.documentElement.style.setProperty('--padding-right', `${calcWidthScrollbar()}px`);
+    })
+
+    window.addEventListener('resize', () => {
+    document.documentElement.style.setProperty('--padding-right', `${calcWidthScrollbar()}px`);
+    })
 }
 
 function ready(fn) {

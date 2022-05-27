@@ -1,0 +1,236 @@
+.footer {
+    &__container {
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 1370px;
+    }
+
+    &__top {
+        padding-top: 40px;
+        padding-bottom: 65px;
+        background: #353942;
+
+        @include _768 {
+            padding: 30px 0;
+        }
+        
+        &-container {
+            display: flex;
+            justify-content: space-between;
+
+            @include _1024 {
+                flex-direction: column;
+            }
+        }
+
+        &-social {
+            align-self: center;
+
+            @include _1024 {
+                margin-top: 40px;
+            }
+
+            @include _768 {
+                align-self: unset;
+            }
+        }
+    }
+
+    &__copyright {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        background: #25282E;
+        color:  #fff;
+        font-size: 15px;
+
+        @include _768 {
+            padding: 30px 0;
+        }
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-text {
+            @include _768 {
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        &-privacy-policy {
+            display: block;
+            color: #00B3FF;
+
+            @include _768 {
+                margin-top: 5px;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.footer-menu {
+    display: flex;
+    width: 100%;
+
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+
+        @include _1024 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @include _768 {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.footer-tab {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        margin-bottom: 15px;
+        font-weight: 400;
+        font-size: 20px;
+        color: #00B3FF;
+
+        &::after {
+            content: '';
+            margin-left: 15px;
+            flex-shrink: 0;
+            width: 13px;
+            height: 7px;
+            background: url('./img/svg/blue-arrow.svg') center no-repeat;
+            background-size: contain;
+        }
+
+        @include _768 {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 0;
+
+            &::after {
+                display: block;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        @include _768 {
+            display: none;
+        }
+    
+        &-item {
+            max-width: 270px;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &-link {
+                font-size: 15px;
+                color: #FFFFFF;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #00B3FF;
+                }
+            }
+
+            &-address {
+                margin-top: 20px;
+                color: #FFFFFF;
+                font-style: normal;
+                font-size: 15px;
+                line-height: 18px;
+            }
+
+            &-map {
+                margin-top: 10px;
+                padding: 0;
+                background-color: transparent;
+                border: none;
+                font-weight: 400;
+                font-size: 15px;
+                color: #AFAFAF;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &.open {
+        @include _768 {
+            .footer-tab__title {
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+            .footer-tab__list {
+                display: flex;
+                padding-top: 15px;
+            }
+        }
+    }
+
+    &--opened {
+        @include _768 {
+            .footer-tab__title {
+                cursor: unset;
+    
+                &::after {
+                    display: none;
+                }
+            }
+    
+            .footer-tab__list {
+                display: flex;
+                padding-top: 15px;
+            }
+        }
+    }
+}
+
+.social-list {
+    display: flex;
+
+    &__item {
+        display: flex;
+        width: 43px;
+        height: 43px;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+
+        &-link {
+            display: flex;
+            flex-shrink: 0;
+
+            &-img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
