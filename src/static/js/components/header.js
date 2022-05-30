@@ -91,6 +91,7 @@ function openMenuClickHandler() {
         const withinBoundaries = event.composedPath().includes(openHeaderSubmenu);
  
         if ( ! withinBoundaries ) {
+            document.body.classList.remove(LOCK_SCROLL_CLASS);
             closeAllActiveTabs(); 
 
             window.removeEventListener('click', openMenuClickHandler);
@@ -102,6 +103,7 @@ function openMenuClickHandler() {
         const withinBoundaries = event.composedPath().includes(openHeaderMenu);
  
         if ( ! withinBoundaries ) {
+            document.body.classList.remove(LOCK_SCROLL_CLASS);
             closeAllActiveTabs(); 
 
             window.removeEventListener('click', openMenuClickHandler);
