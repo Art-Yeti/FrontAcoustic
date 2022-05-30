@@ -25,7 +25,11 @@ body {
 }
 
 body {
-    padding-top: var(--padding-top);
+    padding-top: 170px;
+
+    @include _1100 {
+        padding-top: 70px; 
+    }
 
     &.lock-scroll {
         padding-right: var(--padding-right);

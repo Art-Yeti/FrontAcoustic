@@ -1,9 +1,8 @@
 .header {
     position: fixed;
     top: 0;
-    left: 50%;
+    left: 0;
     width: 100vw;
-    transform: translateX(-50%);
     z-index: 100;
 
     &__container {
@@ -12,6 +11,7 @@
         margin: 0 auto;
         padding: 0 20px;
         max-width: 855px;
+        animation: squeeze-change-max-width 0.3s;
     }
 
     &__top {
@@ -21,7 +21,7 @@
             align-self: center;
             margin-left: 40px;
 
-            @include _855 {
+            @include _1100 {
                 margin-left: auto;
             }
         }
@@ -35,7 +35,7 @@
             height: 100%;
             transition: transform 0.3s;
 
-            @include _855 {
+            @include _1100 {
                 position: absolute;
                 bottom: 0; 
                 right: 0;
@@ -46,7 +46,6 @@
                 flex-direction: column;
                 background: #565E6D;
                 transform: translate(100%, 100%);
-                transition: transform;
                 
                 &.active {
                     transform: translate(0, 100%);
@@ -60,23 +59,28 @@
                 top: 0;
                 display: none;
                 width: 100%;
-                height: calc(100% - 70px);
+                height: calc(100% - 80px);
+                background: transparent;
                 pointer-events: none;
                 z-index: 12;
-                background: linear-gradient(180deg, rgba(196, 196, 196, 0) 80.61%, rgba(136, 142, 152, 0) 80.61%, rgba(134, 140, 151, 0.4) 100%);
                 transition: background 0.3s;
+
+                &.top,
+                &.middle {
+                    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 80.61%, rgba(136, 142, 152, 0) 80.61%, rgba(134, 140, 151, 0.4) 100%);
+                }
 
                 &.bottom {
                     background: transparent;
                 }
 
-                @include _855 {
+                @include _1100 {
                     display: block;
                 }
             }
 
             &-wrapper {
-                @include _855 {
+                @include _1100 {
                     padding: 15px 0;
                     padding-right: 10px;
                     width: 100%;
@@ -93,7 +97,7 @@
             &-contacts {
                 margin-left: 20px;
 
-                @include _855 {
+                @include _1100 {
                     margin: 0;
                 }
             }
@@ -111,7 +115,7 @@
     width: 166px;
     height: 47px;
 
-    @include _855 {
+    @include _1100 {
         padding: 15px 0;
         height: 23px;
         width: 80px;
@@ -149,7 +153,7 @@
     height: 12px;
     background-color: transparent;
 
-    @include _855 {
+    @include _1100 {
         display: flex;
         margin-left: 18px;
     }
@@ -211,7 +215,7 @@
     flex-direction: column;
     height: 100%;
 
-    @include _855 {
+    @include _1100 {
         height: auto;
         padding: 20px;
     }
@@ -229,7 +233,7 @@
             font-size: 18px;
             transition: color 0.3s;
 
-            @include _855 {
+            @include _1100 {
                 font-size: 16px;
             }
 
@@ -241,7 +245,7 @@
                 color: #AFAFAF;
                 font-size: 15px;
 
-                @include _855 {
+                @include _1100 {
                     font-size: 13px;
                 }
 
@@ -259,12 +263,13 @@
     width: 100%;
     height: 100%;
 
-    @include _855 {
-        position: relative;
+    @include _1100 {
+        // position: relative;
         flex-direction: column;
         justify-content: unset;
         width: 100%;
-        height: calc(100% + 10px * 2);
+        // height: calc(100% + 10px * 2);
+        height: auto;
         overflow-y: auto;
         overflow-x: hidden;
 
@@ -283,8 +288,13 @@
     }
 
     &.open {
-        @include _855 {
-            overflow: hidden;
+        @include _1100 {
+            .header-top-submenu {
+                top: 0;
+                // height: 100%;
+                height: calc(100% - 80px);
+                overflow: hidden;
+            }
         }
     }
 
@@ -293,7 +303,7 @@
         display: flex;
         height: 100%;
 
-        @include _855 {
+        @include _1100 {
             position: unset;
             padding-left: 20px;
             height: auto;
@@ -309,7 +319,7 @@
                 display: flex;
                 z-index: 11;
 
-                @include _855 {
+                @include _1100 {
                     right: 0;
                     transform: none;
                 }
@@ -327,8 +337,9 @@
             color: #FFF;
             font-size: 18px;
             transition: color 0.3s;
+            animation: squeeze-padding-top-menu 0.3s;
 
-            @include _855 {
+            @include _1100 {
                 padding: 10px 0;
                 font-size: 12px;
             }
@@ -343,7 +354,7 @@
                 background: url('./img/svg/white-arrow.svg') center no-repeat;
                 background-size: contain;
 
-                @include _855 {
+                @include _1100 {
                     display: block;
                 }
             }
@@ -362,11 +373,11 @@
             width: max-content;
             transform: translate(-50%, 100%);
 
-            @include _855 {
+            @include _1100 {
                 display: flex;
                 left: unset;
                 right: -10px;
-                top: -15px;
+                top: 0;
                 width: 100%;
                 transition: transform 0.3s;
                 transform: translateX(100%);
@@ -380,15 +391,16 @@
     background-color: #565E6D;
     border-radius: 0 0 20px 20px;
 
-    @include _855 {
+    @include _1100 {
         padding: 15px 20px;
         padding-right: 10px;
+        height: calc(100% - 80px);
         border-radius: 0;
         overflow: hidden;
     }
 
     &__list {
-        @include _855 {
+        @include _1100 {
             height: 100%;
             overflow: auto;
             z-index: 1;
@@ -407,13 +419,20 @@
             height: 100%;
             pointer-events: none;
             z-index: 12;
-            background: linear-gradient(180deg, rgba(196, 196, 196, 0) 80.61%, rgba(136, 142, 152, 0) 80.61%, rgba(134, 140, 151, 0.4) 100%);
+            background: transparent;
             transition: background 0.3s;
         }
 
         &.bottom {
             &::before {
                 background: transparent;
+            }
+        }
+
+        &.top,
+        &.middle {
+            &::before {
+                background: linear-gradient(180deg, rgba(196, 196, 196, 0) 80.61%, rgba(136, 142, 152, 0) 80.61%, rgba(134, 140, 151, 0.4) 100%);
             }
         }
 
@@ -428,7 +447,7 @@
                 font-size: 18px;
                 transition: color 0.3s;
 
-                @include _855 {
+                @include _1100 {
                     padding: 10px 0;
                     font-size: 12px;
                 }
@@ -451,7 +470,7 @@
         font-weight: normal;
         font-size: 14px;
 
-        @include _855 {
+        @include _1100 {
             display: block;
         }
     }
@@ -468,7 +487,7 @@
         transition: color 0.3s;
         z-index: 1;
 
-        @include _855 {
+        @include _1100 {
             display: flex;
         }
 
@@ -497,14 +516,26 @@
     margin-left: -20px;
     width: calc(100% + 20px);
 
-    @include _855 {
+    @include _1100 {
         display: none;
+        align-items: unset;
+        margin-left: 0;
+        width: 100%;
     }
 
     &__item {
         display: flex;
         flex-shrink: 0;
         height: 100%;
+        background-color: #353942;
+
+        @include _1100 {
+            padding-left: 20px;
+        }
+
+        &:not(:first-child):not(:last-child) {
+            background: rgba(37, 40, 46, 0.5);
+        }
 
         &-link {
             padding: 20px;
@@ -513,9 +544,143 @@
             color: #FFF;
             transition: color 0.3s;
 
+            @include _1100 {
+                padding: 10px 0;
+                font-size: 12px;
+            }
+
             &:hover {
                 color: #00B3FF;
             }
         }
     }
+}
+
+.cities-list {
+    display: none;
+
+    @include _1100 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        padding-left: 20px;
+
+        &-link {
+            padding: 10px 0;
+            font-size: 12px;
+            color: #FFFFFF;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #00B3FF;
+            }
+        }
+    }
+}
+
+.header-bottom-menu--mobile {
+    display: none;
+
+    @include _1100 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-bottom-menu__item {
+        background-color: #565E6D !important;
+    }
+}
+
+.header.modify {
+    height: 98px;
+
+    .header__container {
+        max-width: 1100px;
+        height: 100%;
+        animation: expand-change-max-width 0.3s;
+    }
+
+    .header__top-logo {
+        flex-shrink: 0;
+    }
+
+    .header__top {
+        height: 100px;
+    }
+
+    .header__top-search {
+        margin-left: 50px;
+        align-self: flex-start;
+        height: 50px;
+    }
+
+    .header__top-nav {
+        align-self: flex-start;
+        justify-content: start;
+        height: 50px;
+    }
+
+    .header-top-menu__item-btn {
+        padding: 15px 20px;
+        animation: expand-padding-top-menu 0.3s;
+    }
+
+    .header__top-nav-contacts {
+        flex-direction: row;
+        
+        .contacts-list__item {
+            &:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: 40px;
+            }
+        }
+    }
+
+    .header-bottom-menu {
+        margin-top: -50px;
+        padding-left: 216px;
+        animation: move-bottom-menu 0.3s;
+        width: 100%; 
+    
+        &__item-link {
+            padding: 16px 20px;
+        }
+    }
+}
+
+
+@keyframes move-bottom-menu {
+    from { 
+        margin-top: 0;
+        margin-left: -20px; 
+        width: calc(100% + 20px);
+    }
+    to { 
+        margin-top: -50px;
+        padding-left: 216px;
+        width: 100%; 
+    }
+}
+
+@keyframes expand-padding-top-menu {
+    from { padding: 33px 20px; }
+    to { padding: 15px 20px; }
+}
+
+@keyframes squeeze-padding-top-menu {
+    from { padding: 15px 20px; }
+    to { padding: 33px 20px; }
+}
+
+@keyframes expand-change-max-width {
+    from { max-width: 855px; }
+    to { max-width: 1100px; }
+}
+
+@keyframes squeeze-change-max-width {
+    from { max-width: 1100px; }
+    to { max-width: 855px; }
 }

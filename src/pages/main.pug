@@ -1,5 +1,6 @@
 extends template/_layout
 
+include ../components/Common/popup/popup
 include ../components/Common/header/header
 include ../components/Sections/text-content/text-content
 include ../components/Sections/indicator/indicator
@@ -11,6 +12,7 @@ block vars
     //- - var bodyclass = 'page-main';
 
 block content
+    +popup('search')
     +header()
 
     main.main

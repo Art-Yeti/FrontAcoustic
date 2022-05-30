@@ -1,7 +1,8 @@
 import { 
     ACTIVE_CLASS,
+    HEADER,
     HEADER_BURGER_BTN, 
-    LOCK_SCROLL_CLASS, OPEN_CLASS 
+    LOCK_SCROLL_CLASS, MODIFY_CLASS, OPEN_CLASS 
 } from '../assets/_const'
 
 import calcHeaderHeight from "../assets/_calcHeaderHeight";
@@ -24,6 +25,7 @@ if (headerNavItemElems.length) {
             switchTabs(headerNavItem, OPEN_CLASS);
             headerMenuWrapperEl.classList.add(OPEN_CLASS);
             headerMenuEl.classList.add(OPEN_CLASS);
+            changeMaskOnScroll(trackTab);
         });
 
         trackTab.addEventListener('scroll', () => {
@@ -31,44 +33,79 @@ if (headerNavItemElems.length) {
         })
 
         closeTabBtn.addEventListener('click', () => {
-            headerNavItem.classList.remove(OPEN_CLASS);
-            headerMenuWrapperEl.classList.remove(OPEN_CLASS);
+            setTimeout(() => {
+                headerMenuWrapperEl.classList.remove(OPEN_CLASS);
+            }, 300)
             headerMenuEl.classList.remove(OPEN_CLASS);
+            headerNavItem.classList.remove(OPEN_CLASS);
         })
     })
 
-    window.addEventListener('click', (e) => {
-        const openHeaderSubmenu = document.querySelector('.js-header-menu-tab.open');
-
-        if (openHeaderSubmenu) {
-            const withinBoundaries = e.composedPath().includes(openHeaderSubmenu);
-     
-            if ( ! withinBoundaries ) {
-                openHeaderSubmenu.classList.remove(OPEN_CLASS)
-            }
-        }
-    })
-
-    headerMenuEl.addEventListener('scroll', () => {
+    headerMenuEl.addEventListener('load scroll', () => {
         changeMaskOnScroll(headerMaskEl);
     })
 }
 
-// задаем значение padding-right для исключения дерганья заднего фона при overflow hidden для body
-document.documentElement.style.setProperty('--padding-top', `${calcHeaderHeight() + 20}px`);
-
-window.addEventListener('orientationchange', () => {
-document.documentElement.style.setProperty('--padding-top', `${calcHeaderHeight() + 20}px`);
-})
-
-window.addEventListener('resize', () => {
-document.documentElement.style.setProperty('--padding-top', `${calcHeaderHeight() + 20}px`);
-})
-
 if (HEADER_BURGER_BTN) {
     HEADER_BURGER_BTN.addEventListener('click', () => {
-        document.body.classList.toggle(LOCK_SCROLL_CLASS);
-        HEADER_BURGER_BTN.classList.toggle(ACTIVE_CLASS);
-        headerNavEl.classList.toggle(ACTIVE_CLASS);
+        const headerNavEl = document.querySelector('.js-header-nav');
+        const headerMaskEl = headerNavEl.querySelector('.js-header-mask');
+        
+        if (HEADER_BURGER_BTN.classList.contains(ACTIVE_CLASS)) {
+            window.removeEventListener('click', openMenuClickHandler);
+            document.body.classList.remove(LOCK_SCROLL_CLASS);
+            
+            closeAllActiveTabs();
+        } else {
+            document.body.classList.add(LOCK_SCROLL_CLASS);
+            HEADER_BURGER_BTN.classList.add(ACTIVE_CLASS);
+            headerNavEl.classList.add(ACTIVE_CLASS);
+
+            setTimeout(() => {
+                window.addEventListener('click', openMenuClickHandler);
+            }, 100)
+        }
+
+        changeMaskOnScroll(headerMaskEl);
     })
+}
+
+function closeAllActiveTabs() {
+    const openElems = Array.from(HEADER.getElementsByClassName(OPEN_CLASS));
+    const activeElems = Array.from(HEADER.getElementsByClassName(ACTIVE_CLASS));
+
+    openElems.forEach((openEl) => {
+        openEl.classList.remove(OPEN_CLASS);
+    })
+
+    activeElems.forEach((activeEl) => {
+        activeEl.classList.remove(ACTIVE_CLASS);
+    })
+}
+
+function openMenuClickHandler() {
+    const openHeaderSubmenu = document.querySelector('.js-header-menu-tab.open');
+    const openHeaderMenu = document.querySelector('.js-header-nav.active');
+
+    if (openHeaderSubmenu) {
+        const withinBoundaries = event.composedPath().includes(openHeaderSubmenu);
+ 
+        if ( ! withinBoundaries ) {
+            closeAllActiveTabs(); 
+
+            window.removeEventListener('click', openMenuClickHandler);
+            return;
+        }
+    } 
+
+    if (openHeaderMenu) {
+        const withinBoundaries = event.composedPath().includes(openHeaderMenu);
+ 
+        if ( ! withinBoundaries ) {
+            closeAllActiveTabs(); 
+
+            window.removeEventListener('click', openMenuClickHandler);
+            return;
+        }
+    }
 }

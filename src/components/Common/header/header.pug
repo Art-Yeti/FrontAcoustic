@@ -4,7 +4,7 @@ mixin header()
             .header__container
                 a.header__top-logo.logo-link(href="/") 
                     img.logo-link__img(src="../img/logo/logo.png" alt="logo")
-                button.header__top-search.search-btn.js-search-btn
+                button.header__top-search.search-btn.js-popup-btn(data-popup='search')
                     img.search-btn__img(src="../img/svg/zoom-icon.png" alt="search")
                 button.header__top-burger.burger-btn.js-burger-btn
                     span
@@ -112,7 +112,26 @@ mixin header()
                                         li.header-top-submenu__list-item 
                                             a.header-top-submenu__list-item-link(href="/") Офисы
 
-                        //- ul.header__top
+                        ul.header__cities.cities-list
+                            li.cities-list__item 
+                                a.cities-list__item-link(href="/") Санкт-Петербург
+                            li.cities-list__item 
+                                a.cities-list__item-link(href="/") Москва
+
+                        ul.header__bottom-menu.header-bottom-menu.header-bottom-menu--mobile
+                            li.header-bottom-menu__item
+                                a.header-bottom-menu__item-link(href="/") Готовые решения
+                            li.header-bottom-menu__item
+                                a.header-bottom-menu__item-link(href="/") Материалы
+                            li.header-bottom-menu__item
+                                a.header-bottom-menu__item-link(href="/") Звукоизоляция
+                            li.header-bottom-menu__item
+                                a.header-bottom-menu__item-link(href="/") Акустика
+                            li.header-bottom-menu__item
+                                a.header-bottom-menu__item-link(href="/") Виброизоляция
+                            li.header-bottom-menu__item
+                                a.header-bottom-menu__item-link(href="/") Наши проекты
+
                     ul.header__top-nav-contacts.contacts-list 
                         li.contacts-list__item 
                             a.contacts-list__item-link(href="tel:88126057095") +7-812-605-70-95
