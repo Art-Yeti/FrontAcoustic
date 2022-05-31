@@ -8,7 +8,6 @@ import {
 
 // ФУНКЦИИ
 
-import calcHeaderHeight from "./assets/_calcHeaderHeight";
 import calcWidthScrollbar from "./assets/_calcWidthScrollbar";
 import calcScrollToTop from "./assets/_calcScrollToTop";
 

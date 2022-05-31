@@ -22,40 +22,94 @@
   <body class="page">
     <div class="page__wrapper">
       <section class="popup js-popup" data-popup="search">
-        <div class="popup__inner">
-          <button class="popup__close-btn js-popup-close-btn"> </button>
-          <div class="popup__title">Поиск</div>
-          <div class="popup__search"><span class="popup__search-circles"></span>
-            <input class="popup__search-input search-input js-search-input" value="Звукоизоляция" placeholder="Поиск"/>
-            <button class="popup__search-btn"></button>
+        <div class="popup__mask js-popup-mask"><svg width="45" height="54" viewBox="0 0 45 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="2" y1="-2" x2="36.2512" y2="-2" transform="matrix(0.558879 0.829249 0.829249 -0.558879 3 0)" stroke="#353942" stroke-width="4" stroke-linecap="round"/>
+<line x1="42.0442" y1="2.77626" x2="22.9019" y2="31.1791" stroke="#353942" stroke-width="4" stroke-linecap="round"/>
+<line x1="2" y1="-2" x2="36.2512" y2="-2" transform="matrix(0.558879 0.829249 0.829249 -0.558879 3 20.457)" stroke="#353942" stroke-width="4" stroke-linecap="round"/>
+<line x1="42.0442" y1="23.2333" x2="22.9019" y2="51.6361" stroke="#353942" stroke-width="4" stroke-linecap="round"/>
+</svg>
+
+        </div>
+        <div class="popup__inner-wrapper js-popup-track">
+          <div class="popup__inner">
+            <button class="popup__close-btn js-popup-close-btn"> </button>
+            <div class="popup__title">Поиск</div>
+            <div class="popup__search"><span class="popup__search-circles"></span>
+              <input class="popup__search-input search-input js-search-input" value="Звукоизоляция" placeholder="Поиск"/>
+              <button class="popup__search-btn"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4157 19.3623C15.6214 19.3623 19.8415 15.2442 19.8415 10.1643C19.8415 5.0843 15.6214 0.966187 10.4157 0.966187C5.21004 0.966187 0.98999 5.0843 0.98999 10.1643C0.98999 15.2442 5.21004 19.3623 10.4157 19.3623Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M25.0099 25.0338L16.7524 16.9758" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+</svg>
+
+              </button>
+            </div>
+            <ul class="popup__result-list search-result js-popup-search-result">
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Звукоизоляция</a>
+                <div class="search-result__item-text">Фронт Акустик. Звукоизоляция квартир, потолков, полов. Продажа звукоизоляционных материалов. Занимаемся всеми вопросами по звукоизоляции.</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Оплата товара</a>
+                <div class="search-result__item-text">Оплатить выбранные товары можно в офисе Front Acoustic, на сайте во время оформления заказа или при доставке материалов. Мы принимаем наличные и банковские карты.</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Двери для гостиниц и отелей HUGA</a>
+                <div class="search-result__item-text">Звукоизоляционные двери для гостиниц, двери для отелей, заказать, купить двери в номера гостиниц с доставкой</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Звукоизоляция</a>
+                <div class="search-result__item-text">Фронт Акустик. Звукоизоляция квартир, потолков, полов. Продажа звукоизоляционных материалов. Занимаемся всеми вопросами по звукоизоляции.</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Оплата товара</a>
+                <div class="search-result__item-text">Оплатить выбранные товары можно в офисе Front Acoustic, на сайте во время оформления заказа или при доставке материалов. Мы принимаем наличные и банковские карты.</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Двери для гостиниц и отелей HUGA</a>
+                <div class="search-result__item-text">Звукоизоляционные двери для гостиниц, двери для отелей, заказать, купить двери в номера гостиниц с доставкой</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Звукоизоляция</a>
+                <div class="search-result__item-text">Фронт Акустик. Звукоизоляция квартир, потолков, полов. Продажа звукоизоляционных материалов. Занимаемся всеми вопросами по звукоизоляции.</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Оплата товара</a>
+                <div class="search-result__item-text">Оплатить выбранные товары можно в офисе Front Acoustic, на сайте во время оформления заказа или при доставке материалов. Мы принимаем наличные и банковские карты.</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Двери для гостиниц и отелей HUGA</a>
+                <div class="search-result__item-text">Звукоизоляционные двери для гостиниц, двери для отелей, заказать, купить двери в номера гостиниц с доставкой</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Звукоизоляция</a>
+                <div class="search-result__item-text">Фронт Акустик. Звукоизоляция квартир, потолков, полов. Продажа звукоизоляционных материалов. Занимаемся всеми вопросами по звукоизоляции.</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Оплата товара</a>
+                <div class="search-result__item-text">Оплатить выбранные товары можно в офисе Front Acoustic, на сайте во время оформления заказа или при доставке материалов. Мы принимаем наличные и банковские карты.</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Двери для гостиниц и отелей HUGA</a>
+                <div class="search-result__item-text">Звукоизоляционные двери для гостиниц, двери для отелей, заказать, купить двери в номера гостиниц с доставкой</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Звукоизоляция</a>
+                <div class="search-result__item-text">Фронт Акустик. Звукоизоляция квартир, потолков, полов. Продажа звукоизоляционных материалов. Занимаемся всеми вопросами по звукоизоляции.</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Оплата товара</a>
+                <div class="search-result__item-text">Оплатить выбранные товары можно в офисе Front Acoustic, на сайте во время оформления заказа или при доставке материалов. Мы принимаем наличные и банковские карты.</div>
+              </li>
+              <li class="search-result__item"> <a class="search-result__item-link" href="/">Двери для гостиниц и отелей HUGA</a>
+                <div class="search-result__item-text">Звукоизоляционные двери для гостиниц, двери для отелей, заказать, купить двери в номера гостиниц с доставкой</div>
+              </li>
+            </ul>
           </div>
-          <ul class="popup__result-list search-result">
-            <li class="search-result__item"> <a class="search-result__item-link" href="/">Звукоизоляция</a>
-              <div class="search-result__item-text">Фронт Акустик. Звукоизоляция квартир, потолков, полов. Продажа звукоизоляционных материалов. Занимаемся всеми вопросами по звукоизоляции.</div>
-            </li>
-            <li class="search-result__item"> <a class="search-result__item-link" href="/">Оплата товара</a>
-              <div class="search-result__item-text">Оплатить выбранные товары можно в офисе Front Acoustic, на сайте во время оформления заказа или при доставке материалов. Мы принимаем наличные и банковские карты.</div>
-            </li>
-            <li class="search-result__item"> <a class="search-result__item-link" href="/">Двери для гостиниц и отелей HUGA</a>
-              <div class="search-result__item-text">Звукоизоляционные двери для гостиниц, двери для отелей, заказать, купить двери в номера гостиниц с доставкой</div>
-            </li>
-          </ul>
         </div>
       </section>
       <header class="header js-header">
         <div class="header__top"> 
           <div class="header__container"><a class="header__top-logo logo-link" href="/"> <img class="logo-link__img" src="../img/logo/logo.png" alt="logo"/></a>
-            <button class="header__top-search search-btn js-popup-btn" data-popup="search"><img class="search-btn__img" src="../img/svg/zoom-icon.png" alt="search"/></button>
+            <button class="header__top-search search-btn js-popup-btn" data-popup="search"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4157 19.3623C15.6214 19.3623 19.8415 15.2442 19.8415 10.1643C19.8415 5.0843 15.6214 0.966187 10.4157 0.966187C5.21004 0.966187 0.98999 5.0843 0.98999 10.1643C0.98999 15.2442 5.21004 19.3623 10.4157 19.3623Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M25.0099 25.0338L16.7524 16.9758" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+</svg>
+
+            </button>
             <button class="header__top-burger burger-btn js-burger-btn"><span></span></button>
             <nav class="header__top-nav js-header-nav">
-              <div class="header__top-nav-mask js-header-mask"></div>
               <div class="header__top-nav-wrapper js-header-menu-wrapper">
                 <ul class="header__top-nav-list header-top-menu js-header-menu">
                   <li class="header-top-menu__item js-header-menu-tab">
-                    <button class="header-top-menu__item-btn js-header-menu-tab-trigger">Услуги</button>
+                    <button class="header-top-menu__item-btn js-header-menu-tab-trigger" data-href="/">Услуги</button>
                     <div class="header-top-menu__item-submenu js-header-menu-tab-content header-top-submenu">
-                      <button class="header-top-submenu__back-btn js-header-menu-back-btn">Назад</button>
-                      <h3 class="header-top-submenu__title">Услуги</h3>
+                      <button class="header-top-submenu__back-btn js-header-menu-back-btn">Назад</button><a class="header-top-submenu__title" href="/">Услуги</a>
                       <ul class="header-top-menu__item-submenu-list header-top-submenu__list js-header-menu-track">
                         <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Услуги</a></li>
                         <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Услуги</a></li>
@@ -69,10 +123,9 @@
                     </div>
                   </li>
                   <li class="header-top-menu__item js-header-menu-tab">
-                    <button class="header-top-menu__item-btn js-header-menu-tab-trigger">Типовые проблемы</button>
+                    <button class="header-top-menu__item-btn js-header-menu-tab-trigger" data-href="/">Типовые проблемы</button>
                     <div class="header-top-menu__item-submenu js-header-menu-tab-content header-top-submenu">
-                      <button class="header-top-submenu__back-btn js-header-menu-back-btn">Назад</button>
-                      <h3 class="header-top-submenu__title">Типовые проблемы</h3>
+                      <button class="header-top-submenu__back-btn js-header-menu-back-btn">Назад</button><a class="header-top-submenu__title" href="/">Типовые проблемы</a>
                       <ul class="header-top-menu__item-submenu-list header-top-submenu__list js-header-menu-track">
                         <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Типовые проблемы</a></li>
                         <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Типовые проблемы</a></li>
@@ -86,13 +139,12 @@
                     </div>
                   </li>
                   <li class="header-top-menu__item js-header-menu-tab">
-                    <button class="header-top-menu__item-btn js-header-menu-tab-trigger">Офисы</button>
+                    <button class="header-top-menu__item-btn js-header-menu-tab-trigger" data-href="/">Офисы</button>
                     <div class="header-top-menu__item-submenu js-header-menu-tab-content header-top-submenu">
-                      <button class="header-top-submenu__back-btn js-header-menu-back-btn">Назад</button>
-                      <h3 class="header-top-submenu__title">Офисы</h3>
+                      <button class="header-top-submenu__back-btn js-header-menu-back-btn">Назад</button><a class="header-top-submenu__title" href="/">Офисы</a>
                       <ul class="header-top-menu__item-submenu-list header-top-submenu__list js-header-menu-track">
-                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
-                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Санкт-Петербург</a></li>
+                        <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Москва</a></li>
                         <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
                         <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
                         <li class="header-top-submenu__list-item"> <a class="header-top-submenu__list-item-link" href="/">Офисы</a></li>
@@ -118,12 +170,26 @@
                       </ul>
                     </div>
                   </li>
-                </ul>
-                <ul class="header__cities cities-list">
-                  <li class="cities-list__item"> <a class="cities-list__item-link" href="/">Санкт-Петербург</a></li>
-                  <li class="cities-list__item"> <a class="cities-list__item-link" href="/">Москва</a></li>
                 </ul>
                 <ul class="header__bottom-menu header-bottom-menu header-bottom-menu--mobile">
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Готовые решения</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Материалы</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Звукоизоляция</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Акустика</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Виброизоляция</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Наши проекты</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Готовые решения</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Материалы</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Звукоизоляция</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Акустика</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Виброизоляция</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Наши проекты</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Готовые решения</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Материалы</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Звукоизоляция</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Акустика</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Виброизоляция</a></li>
+                  <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Наши проекты</a></li>
                   <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Готовые решения</a></li>
                   <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Материалы</a></li>
                   <li class="header-bottom-menu__item"><a class="header-bottom-menu__item-link" href="/">Звукоизоляция</a></li>
@@ -136,6 +202,7 @@
                 <li class="contacts-list__item"> <a class="contacts-list__item-link" href="tel:88126057095">+7-812-605-70-95</a></li>
                 <li class="contacts-list__item"> <a class="contacts-list__item-link contacts-list__item-link--grey" href="mailto:info@frontacoustic.ru">info@frontacoustic.ru</a></li>
               </ul>
+              <div class="header__top-nav-mask js-header-mask"></div>
             </nav>
           </div>
         </div>
@@ -264,17 +331,6 @@
                     <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Новости</a></li>
                     <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Наши работы</a></li>
                     <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Партерам</a></li>
-                  </ul>
-                </li>
-                <li class="footer-menu__list-item footer-tab js-menu-tab">
-                  <h3 class="footer-tab__title js-menu-tab-trigger">Наши услуги</h3>
-                  <ul class="footer-tab__list js-menu-tab-content"> 
-                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция стен </a></li>
-                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция под обои </a></li>
-                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция потолка  </a></li>
-                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция пола  </a></li>
-                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция под ламинат </a></li>
-                    <li class="footer-tab__list-item"> <a class="footer-tab__list-item-link" href="/">Звукоизоляция перегородок  </a></li>
                   </ul>
                 </li>
                 <li class="footer-menu__list-item footer-tab footer-tab--opened">

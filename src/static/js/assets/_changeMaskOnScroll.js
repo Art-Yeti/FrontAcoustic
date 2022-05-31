@@ -4,26 +4,27 @@ import {
     MIDDLE_CLASS,
 } from './_const'
 
-export default function(scrolling_el) {
+export default function(scrolling_el, scroll_mask = false) {
     const $this = scrolling_el ? scrolling_el : event.target;
+    const scrollMask = scroll_mask ? scroll_mask : $this;
     const position = $($this).scrollTop();
     const frameHeight = $($this).outerHeight();
     const scrollHeight = $($this)[0].scrollHeight;
 
      if (Math.ceil(position) >= Math.floor(scrollHeight - frameHeight)) {
         // console.log('Bottom');
-        scrolling_el.classList.remove(TOP_CLASS);
-        scrolling_el.classList.remove(MIDDLE_CLASS);
-        scrolling_el.classList.add(BOTTOM_CLASS);
+        scrollMask.classList.remove(TOP_CLASS);
+        scrollMask.classList.remove(MIDDLE_CLASS);
+        scrollMask.classList.add(BOTTOM_CLASS);
     } else if (position <= 0) {
             // console.log('Top');
-            scrolling_el.classList.add(TOP_CLASS);
-            scrolling_el.classList.remove(MIDDLE_CLASS);
-            scrolling_el.classList.remove(BOTTOM_CLASS);
+            scrollMask.classList.add(TOP_CLASS);
+            scrollMask.classList.remove(MIDDLE_CLASS);
+            scrollMask.classList.remove(BOTTOM_CLASS);
     } else {
         // console.log("Mid");
-        scrolling_el.classList.remove(TOP_CLASS);
-        scrolling_el.classList.add(MIDDLE_CLASS);
-        scrolling_el.classList.remove(BOTTOM_CLASS);
+        scrollMask.classList.remove(TOP_CLASS);
+        scrollMask.classList.add(MIDDLE_CLASS);
+        scrollMask.classList.remove(BOTTOM_CLASS);
     }
 }

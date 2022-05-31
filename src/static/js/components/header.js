@@ -1,11 +1,12 @@
 import { 
     ACTIVE_CLASS,
+    BREAKPOINTS,
     HEADER,
     HEADER_BURGER_BTN, 
-    LOCK_SCROLL_CLASS, MODIFY_CLASS, OPEN_CLASS 
+    LOCK_SCROLL_CLASS, 
+    OPEN_CLASS 
 } from '../assets/_const'
 
-import calcHeaderHeight from "../assets/_calcHeaderHeight";
 import changeMaskOnScroll from "../assets/_changeMaskOnScroll";
 import switchTabs from "../assets/_switchTabs";
 
@@ -22,10 +23,20 @@ if (headerNavItemElems.length) {
         const closeTabBtn = headerNavItem.querySelector('.js-header-menu-back-btn');
 
         triggerTab.addEventListener('click', (e) => {
-            switchTabs(headerNavItem, OPEN_CLASS);
-            headerMenuWrapperEl.classList.add(OPEN_CLASS);
-            headerMenuEl.classList.add(OPEN_CLASS);
-            changeMaskOnScroll(trackTab);
+            const window_width = window.innerWidth;
+
+            if (window_width > BREAKPOINTS.TABLET) {
+                const url = triggerTab.dataset.href;
+
+                window.location.href = url;
+            } else {
+                switchTabs(headerNavItem, OPEN_CLASS);
+                headerMenuWrapperEl.classList.add(OPEN_CLASS);
+                headerMenuEl.classList.add(OPEN_CLASS);
+                changeMaskOnScroll(trackTab);
+    
+                changeMaskOnScroll(headerMenuWrapperEl, headerMaskEl);
+            }
         });
 
         trackTab.addEventListener('scroll', () => {
@@ -33,17 +44,16 @@ if (headerNavItemElems.length) {
         })
 
         closeTabBtn.addEventListener('click', () => {
-            setTimeout(() => {
-                headerMenuWrapperEl.classList.remove(OPEN_CLASS);
-            }, 300)
+            headerMenuWrapperEl.classList.remove(OPEN_CLASS);
             headerMenuEl.classList.remove(OPEN_CLASS);
             headerNavItem.classList.remove(OPEN_CLASS);
         })
     })
-
-    headerMenuEl.addEventListener('load scroll', () => {
-        changeMaskOnScroll(headerMaskEl);
+    
+    headerMenuWrapperEl.addEventListener('scroll', () => {
+        changeMaskOnScroll(headerMenuWrapperEl, headerMaskEl);
     })
+
 }
 
 if (HEADER_BURGER_BTN) {
@@ -61,7 +71,12 @@ if (HEADER_BURGER_BTN) {
             HEADER_BURGER_BTN.classList.add(ACTIVE_CLASS);
             headerNavEl.classList.add(ACTIVE_CLASS);
 
+            
             setTimeout(() => {
+                if (headerMenuWrapperEl && headerMaskEl) {
+                    changeMaskOnScroll(headerMenuWrapperEl, headerMaskEl);
+                }
+
                 window.addEventListener('click', openMenuClickHandler);
             }, 100)
         }

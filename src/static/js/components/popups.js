@@ -1,5 +1,6 @@
 import { ACTIVE_CLASS, LOCK_SCROLL_CLASS } from "../assets/_const";
 
+import changeMaskOnScroll from "../assets/_changeMaskOnScroll";
 
 const popupWindowElems = Array.from(document.getElementsByClassName('js-popup'));
 
@@ -12,10 +13,17 @@ if (popupWindowElems.length) {
             popupOpenBtnEl.addEventListener('click', () => {
                 const popupAttr = popupOpenBtnEl.dataset.popup;
                 const activePopup = document.querySelector(`.js-popup[data-popup='${popupAttr}']`);
-                const closePopupBtn = activePopup.querySelector('.js-popup-close-btn ');
-    
+                const popupScrollMask = activePopup.querySelector('.js-popup-mask');
+                const popupScrollTrack = activePopup.querySelector('.js-popup-track');
+
                 document.body.classList.add(LOCK_SCROLL_CLASS);
                 activePopup.classList.add(ACTIVE_CLASS);
+
+                changeMaskOnScroll(popupScrollTrack, popupScrollMask);
+                
+                popupScrollTrack.addEventListener('scroll', () => {
+                    changeMaskOnScroll(popupScrollTrack, popupScrollMask);
+                })
             })
         })
     }
