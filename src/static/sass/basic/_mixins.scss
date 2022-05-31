@@ -99,8 +99,8 @@
   }
 }
 
-@mixin _1000 {
-  @media screen and (max-width: 1000px) {
+@mixin _1100 {
+  @media screen and (max-width: 1100px) {
     @content;
   }
 }

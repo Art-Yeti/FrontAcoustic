@@ -1,13 +1,13 @@
 .indicator {
     padding: 45px 0;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
 
     @include _768 {
         padding: 35px 0;
     }
 
     @include _576 {
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
         padding: 15px 0;
     }
 }

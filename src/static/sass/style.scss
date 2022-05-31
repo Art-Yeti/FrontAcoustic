@@ -1,26 +1,104 @@
 @import "src/static/sass/basic/common";
-@import "node_modules/jquery.scrollbar/sass/jquery.scrollbar.scss";
 @import "src/static/sass/swiper-bundle.scss"; //переименовал в scss
-@import "src/static/sass/nouislider.scss";
+@import "src/static/sass/fancybox.scss"; //переименовал в scss
+@import "src/static/sass/carousel.scss"; //переименовал в scss
 
 :root {
     --padding-right: 0;
     --padding-top: 0;
 }
 
-html, 
-body {
-    min-width: 320px;
+
+
+// *{
+//     box-sizing: border-box;
+// }
+
+// html,body{
+//     box-sizing: border-box;
+//     height: 100%;
+//     overflow-x: hidden;
+
+//     min-width: 320px;
+//     font-family: 'Roboto', sans-serif;
+//     font-size: 20px;
+//     color: #000;
+
+//     @include _768 {
+//         font-size: 18px;
+//     }
+
+//     @include _576 {
+//         font-size: 16px;
+//     }
+//   }
+
+.fancybox__nav .carousel__button.is-next, 
+.fancybox__nav .carousel__button.is-prev {
+    transform: translateY(-10%);
+}
+  
+.container__bb-page{
+
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     color: #000;
 
     @include _768 {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     @include _576 {
         font-size: 16px;
+    }
+
+    colfield{
+        display: block;
+        padding: 30px 40px;
+        margin-bottom: 20px;
+        background-color: rgba(179, 227, 255, 0.3);
+
+        @include _768 {
+            padding: 15px 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+  a{
+    text-decoration: none;
+  }
+  
+  h1,h2,h3{
+    margin: 0;
+    padding: 0;
+  }
+
+  h3{
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    color: #25282E;
+    margin-bottom: 30px;
+  }
+  
+.swiper-btn-next,
+.swiper-btn-prev{
+    display: block;
+    position: absolute;
+    right: -10px;
+    top: 140px;
+    height: 51px;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+    &:hover{
+        transform: scale(1.07);
+    }
+
+    @include _1100 {
+        top: 80px;
+        right: 0;
     }
 }
 
@@ -39,38 +117,55 @@ body {
 }
 
 .container {
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: 1140px;
+    .swiper-btn-prev{
+        right: unset;
+        left: -10px;
+        transform: rotate(180deg);
 
-    @include _576 {
-        padding:  0 10px;
+        &:hover{
+            transform: scale(1.07) rotate(180deg);
+        }
+
+        @include _1100 {
+            left: 0;
+        }
+    } 
+
+    .spec-container {
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: 1140px;
+
+        @include _576 {
+            padding:  0 10px;
+        }
     }
-}
-
-h2 {
-    margin-bottom: 30px;
-    padding: 0 20px;
-    text-align: center;
-    font-weight: normal;
-    font-size: 25px;
-    color: #25282E;
-
-    @include _768 {
-        margin-bottom: 20px;
-        font-size: 20px;
-    }
-
-    @include _576 {
-        padding:  0 10px;
-    }
-}
-
-.bg-black {
-    background: #25282E;
 
     h2 {
-        color: #FFF;
+        margin-bottom: 30px;
+        padding: 0 20px;
+        text-align: center;
+        font-weight: normal;
+        font-size: 25px;
+        color: #25282E;
+
+        @include _768 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        @include _576 {
+            padding:  0 10px;
+        }
     }
-        
-}
+
+    .bg-black {
+        background: #25282E;
+
+        h2 {
+            color: #FFF;
+        }
+            
+    }
+
+}}

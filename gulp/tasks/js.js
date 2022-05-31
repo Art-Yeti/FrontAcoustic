@@ -39,18 +39,21 @@ module.exports = function () {
 					}]
 				},
 				plugins: [
-          new webpack.ProvidePlugin({
-						Blazy: 'blazy',
-					}),
+          			// new webpack.ProvidePlugin({
+					// 	Blazy: 'blazy',
+					// }),
 					// new webpack.ProvidePlugin({
 					// 	$: 'jquery',
 					// 	jQuery: 'jquery',
 					// 	"window.jQuery": "jquery"
 					// }),
+					// new webpack.ProvidePlugin({
+					// 	identifier: 'jquery-ui',
+					// 	// ...
+					// }),
 					new webpack.ProvidePlugin({
-						identifier: 'jquery-ui',
-						// ...
-					})
+						Swiper: 'swiper/swiper-bundle.min',
+					}),
 				],
 				// externals: {
 				// 	$: 'jquery',

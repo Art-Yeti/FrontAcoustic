@@ -1,0 +1,25 @@
+mixin article-slider(data)
+    section.article-slider
+        h3.article-slider__title Материалы для звукоизоляции конференц-залов
+        .article-slider__container.js-article-slider
+            .swiper-wrapper
+
+                a(href="/").article-slider__item.swiper-slide
+                    .article-slider__img
+                        img(src="/img/article_1.jpg")
+                    .article-slider__text Демпферные ленты
+
+                a(href="/").article-slider__item.swiper-slide
+                    .article-slider__img
+                        img(src="/img/article_2.jpg")
+                    .article-slider__text Демпферные ленты
+
+                a(href="/").article-slider__item.swiper-slide
+                    .article-slider__img
+                        img(src="/img/article_3.jpg")
+                    .article-slider__text Демпферные ленты
+            .swiper-btn-next
+                img(src="/img/svg/slider-arrow.svg")
+            .swiper-btn-prev
+                img(src="/img/svg/slider-arrow.svg")
+
