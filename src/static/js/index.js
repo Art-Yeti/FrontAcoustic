@@ -21,8 +21,13 @@ import './components/footer';
 import './components/sliders';
 
 function initAll() {
+    let vh = window.innerHeight * 0.01;
+
     // задаем значение padding-right для исключения дерганья заднего фона при overflow hidden для body
     document.documentElement.style.setProperty('--padding-right', `${calcWidthScrollbar()}px`);
+
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
     window.addEventListener('orientationchange', () => {
         const window_width = window.innerWidth;
@@ -39,6 +44,9 @@ function initAll() {
         if (window_width < BREAKPOINTS.TABLET && document.querySelector('.js-header-nav').classList.contains(ACTIVE_CLASS)) {
             document.body.classList.add(LOCK_SCROLL_CLASS);
         }
+
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
     })
 
     window.addEventListener('resize', () => {
@@ -56,6 +64,9 @@ function initAll() {
         if (window_width < BREAKPOINTS.TABLET && document.querySelector('.js-header-nav').classList.contains(ACTIVE_CLASS)) {
             document.body.classList.add(LOCK_SCROLL_CLASS);
         }
+
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
     })
 
     window.addEventListener('scroll', () => {
@@ -70,6 +81,9 @@ function initAll() {
                 HEADER.classList.remove(MODIFY_CLASS);
             }
         } 
+
+        // let vh = window.innerHeight * 0.01;
+        // document.documentElement.style.setProperty('--vh', `${vh}px`);
     })
 
 
