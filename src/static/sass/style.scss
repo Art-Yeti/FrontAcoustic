@@ -33,6 +33,21 @@
 //     }
 //   }
 
+body {
+    padding-top: 170px;
+    font-family: 'Roboto', sans-serif;
+
+    @include _1100 {
+        padding-top: 70px; 
+    }
+
+    &.lock-scroll {
+        padding-right: var(--padding-right);
+        overflow: hidden;
+    }
+
+}
+
 .fancybox__nav .carousel__button.is-next, 
 .fancybox__nav .carousel__button.is-prev {
     transform: translateY(-10%);
@@ -40,7 +55,7 @@
   
 .container__bb-page{
 
-    font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto', sans-serif;
     font-size: 17px;
     color: #000;
 
@@ -102,21 +117,7 @@
     }
 }
 
-body {
-    padding-top: 170px;
-
-    @include _1100 {
-        padding-top: 70px; 
-    }
-
-    &.lock-scroll {
-        padding-right: var(--padding-right);
-        overflow: hidden;
-    }
-
-}
-
-.container {
+// .container {
     .swiper-btn-prev{
         right: unset;
         left: -10px;
@@ -168,4 +169,5 @@ body {
             
     }
 
-}}
+// }
+}
