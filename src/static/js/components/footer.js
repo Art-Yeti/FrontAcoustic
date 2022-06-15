@@ -1,13 +1,26 @@
 import { OPEN_CLASS } from '../assets/_const'
 
-const footerNavItemElems = Array.from(document.getElementsByClassName('js-menu-tab'));
+addEvents();
 
-if (footerNavItemElems.length) {
-    footerNavItemElems.forEach((footerNavItem) => {
-        const triggerTab = footerNavItem.querySelector('.js-menu-tab-trigger');
+document.addEventListener ('DOMNodeInserted', (event) => {
 
-        triggerTab.addEventListener('click', (e) => {
-            footerNavItem.classList.toggle(OPEN_CLASS);
+    if (event.target.classList.contains('js-menu-tab')) {
+        
+        addEvents();
+
+    }
+}, false);
+
+function addEvents(){
+    const footerNavItemElems = Array.from(document.getElementsByClassName('js-menu-tab'));
+
+    if (footerNavItemElems.length) {
+        footerNavItemElems.forEach((footerNavItem) => {
+            const triggerTab = footerNavItem.querySelector('.js-menu-tab-trigger');
+
+            triggerTab.addEventListener('click', (e) => {
+                footerNavItem.classList.toggle(OPEN_CLASS);
+            })
         })
-    })
+    }
 }

@@ -1,4 +1,4 @@
-import Swiper from "swiper/swiper-bundle.min";
+// import Swiper from "swiper/swiper-bundle.min";
 
 // THUMB SLIDERS
 

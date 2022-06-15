@@ -51,9 +51,9 @@ module.exports = function () {
 					// 	identifier: 'jquery-ui',
 					// 	// ...
 					// }),
-					new webpack.ProvidePlugin({
-						Swiper: 'swiper/swiper-bundle.min',
-					}),
+					// new webpack.ProvidePlugin({
+					// 	Swiper: 'swiper/swiper-bundle.min',
+					// }),
 				],
 				// externals: {
 				// 	$: 'jquery',
@@ -64,26 +64,26 @@ module.exports = function () {
 					minimizer: [
 						new TerserPlugin({
 							sourceMap: true,
-              terserOptions: {
-              compress: {
-                      drop_console: webpackMode === 'production',
-                  }
-              }
+							terserOptions: {
+							compress: {
+									drop_console: webpackMode === 'production',
+								}
+							}
 						}),
 					],
           splitChunks: {
-            cacheGroups: {
-              default: false,
-              vendors: false,
-              // vendor chunk
-              vendor: {
-                // sync + async chunks
-                name: 'shared',
-                chunks: 'all',
-                // import file path containing node_modules
-                test: /node_modules/
-              },
-            }
+            // cacheGroups: {
+            //   default: false,
+            //   vendors: false,
+            //   // vendor chunk
+            //   vendor: {
+            //     // sync + async chunks
+            //     name: 'shared',
+            //     chunks: 'all',
+            //     // import file path containing node_modules
+            //     test: /node_modules/
+            //   },
+            // }
             // chunks: 'all',
           },
 				},

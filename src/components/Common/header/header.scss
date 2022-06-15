@@ -1,3 +1,4 @@
+.redesign-wrapper {
 .header {
     position: fixed;
     top: 0;
@@ -741,4 +742,5 @@
 @keyframes squeeze-change-max-width {
     from { max-width: 1100px; }
     to { max-width: 855px; }
+}
 }

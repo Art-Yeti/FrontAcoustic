@@ -6,7 +6,7 @@ import {
     MODIFY_CLASS 
 } from "./assets/_const";
 
-import { Fancybox, Carousel } from "@fancyapps/ui";
+// import { Fancybox, Carousel } from "@fancyapps/ui";
 
 // ФУНКЦИИ
 
@@ -21,6 +21,7 @@ import './components/footer';
 import './components/sliders';
 
 function initAll() {
+
     let vh = window.innerHeight * 0.01;
 
     // задаем значение padding-right для исключения дерганья заднего фона при overflow hidden для body

@@ -1,3 +1,4 @@
+.redesign-wrapper {
 ul.paths {
     display: flex;
     align-items: center;
@@ -62,4 +63,5 @@ li.paths__item {
     @include _576 {
         font-size: 16px;
     }
+}
 }
