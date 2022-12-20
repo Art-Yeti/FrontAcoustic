@@ -3,6 +3,12 @@
 
     padding-top: 30px;
 
+    &:before{
+        display: block;
+        content: "";
+        height: 1px;
+    }
+
     h3 {
         margin-bottom: 20px;
         font-weight: normal;

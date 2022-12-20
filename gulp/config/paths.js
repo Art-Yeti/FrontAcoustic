@@ -34,7 +34,7 @@ module.exports = {
     public: source + "/public/**/*"
   },
   build: {
-    styles: build,
+    styles: build + "/css",
     html: build + "/tpl",
     js: build + "/js",
     fonts: build + "/fonts",

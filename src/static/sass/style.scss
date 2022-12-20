@@ -8,13 +8,13 @@
     --padding-top: 0;
 }
 
-body.redesign-wrapper {
-    padding-top: 170px;
-    font-family: 'Roboto', sans-serif;
+html body {
+    // padding-top: 170px;
+    // font-family: 'Roboto', sans-serif;
 
-    @include _1100 {
-        padding-top: 70px; 
-    }
+    // @include _1100 {
+    //     padding-top: 70px; 
+    // }
 
     &.lock-scroll {
         padding-right: var(--padding-right);
@@ -23,12 +23,18 @@ body.redesign-wrapper {
 
 }
 
+
+.page__wrapper.redesign-wrapper{
+    background-color: white;
+}
   
 .redesign-wrapper{
 
-    // font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 17px;
+    line-height: 1.15;
     color: #000;
+    background-color: #ffffff;
 
     @include _768 {
         font-size: 17px;
@@ -36,6 +42,35 @@ body.redesign-wrapper {
 
     @include _576 {
         font-size: 16px;
+    }
+
+    .carousel:not(.initialized){
+        display: block;
+    }
+
+    .page__wrapper{
+        background-color: white;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    p{
+        color: #000;
+    }
+
+    ul, li{
+        color: #000;
+    }
+
+    .search-res,
+    .search-input{
+        box-shadow: none;
+    }
+
+    address{
+        margin: 0;
     }
 
     colfield{
@@ -142,6 +177,11 @@ body.redesign-wrapper {
         h2 {
             color: #FFF;
         }
+    
+        p {
+            color: #ffffff;
+        }
+        
             
     }
 

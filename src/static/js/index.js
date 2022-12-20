@@ -6,7 +6,8 @@ import {
     MODIFY_CLASS 
 } from "./assets/_const";
 
-// import { Fancybox, Carousel } from "@fancyapps/ui";
+import { Fancybox, Carousel } from "@fancyapps/ui";
+import Swiper from "swiper/swiper-bundle.min";
 
 // ФУНКЦИИ
 
@@ -70,6 +71,12 @@ function initAll() {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     })
 
+    
+    let head_h = $('.js-header').height();
+    const head_pl = $('<div>', {
+        class: 'header__placeholder js-header-ph'
+    });
+
     window.addEventListener('scroll', () => {
         const window_width = window.innerWidth;
 
@@ -81,7 +88,19 @@ function initAll() {
             if (calcScrollToTop() <= 50 && HEADER.classList.contains(MODIFY_CLASS)) {
                 HEADER.classList.remove(MODIFY_CLASS);
             }
-        } 
+        }
+        
+        head_h = $('.js-header').height();
+
+        if(calcScrollToTop() > 0){
+            head_pl.height(head_h);
+            $('.js-header').addClass('fixed');
+
+            $("body").prepend(head_pl)
+        }else{
+            head_pl.remove();
+            $('.js-header').removeClass('fixed');
+        }
 
         // let vh = window.innerHeight * 0.01;
         // document.documentElement.style.setProperty('--vh', `${vh}px`);

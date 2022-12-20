@@ -16,7 +16,7 @@
     &.active {
         opacity: 1;
         pointer-events: unset;
-        z-index: 101;
+        z-index: 999999;
         transition: opacity 0.3s;
 
         .popup__inner {
@@ -306,7 +306,7 @@
     }
 }
 
-.search-result {
+.search-res {
     display: flex;
     flex-direction: column;
 

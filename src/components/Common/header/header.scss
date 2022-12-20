@@ -1,10 +1,27 @@
 .redesign-wrapper {
 .header {
-    position: fixed;
+    // position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100vw;
-    z-index: 100;
+    z-index: 99999;
+
+    &.fixed{
+        position: fixed;
+    }
+
+    &__placeholder{
+        width: 100%;
+        height: 140px;
+        display: block;
+        position: relative;
+        background-color: white;
+
+        @include _1100 {
+            height: 55px; 
+        }
+    }
 
     &__container {
         display: flex;
@@ -138,10 +155,19 @@
 }
 
 .logo-link {
+    // box-sizing: content-box;
+    // display: flex;
+    // width: 166px;
+    // height: 47px;
+
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    width: 166px;
-    height: 47px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 145px;
 
     @include _1100 {
         padding: 15px 0;
@@ -356,6 +382,7 @@
                     z-index: 11;
                     right: 0;
                     transform: none;
+                    min-width: unset;
                 }
             }
         }
@@ -374,8 +401,10 @@
             animation: squeeze-padding-top-menu 0.3s;
 
             @include _1100 {
-                padding: 10px 0;
-                font-size: 12px;
+                // padding: 10px 0;
+                // font-size: 12px;
+                padding: 17px 0;
+                font-size: 16px;
             }
 
             &::after {
@@ -385,7 +414,7 @@
                 flex-shrink: 0;
                 width: 7px;
                 height: 11px;
-                background: url('./img/svg/white-arrow.svg') center no-repeat;
+                background: url('./../img/svg/white-arrow.svg') center no-repeat;
                 background-size: contain;
 
                 @include _1100 {
@@ -404,7 +433,8 @@
             left: 50%;
             bottom: 0;
             flex-direction: column;
-            width: calc(100% + 20px * 2);
+            width: fit-content;
+            min-width: calc(100% + 20px * 2);
             transform: translate(-50%, 100%);
 
             @include _1100 {
@@ -487,9 +517,12 @@
                 transition: color 0.3s;
 
                 @include _1100 {
-                    padding: 10px 0;
+                    // padding: 10px 0;
+                    // text-align: unset;
+                    // font-size: 12px;
+                    padding: 17px 0;
                     text-align: unset;
-                    font-size: 12px;
+                    font-size: 16px;
                 }
     
                 &:hover {
@@ -508,7 +541,7 @@
         padding-left: 20px;
         width: calc(100% + 20px * 2);
         font-weight: normal;
-        font-size: 14px;
+        font-size: 18px;
 
         @include _1100 {
             display: block;
@@ -523,12 +556,14 @@
         background-color: transparent;
         border: none;
         color: #fff;
-        font-size: 12px;
+        font-size: 16px;
         transition: color 0.3s;
         z-index: 1;
 
         @include _1100 {
             display: flex;
+            padding: 17px 0;
+            font-size: 16px;
         }
 
         &:hover {
@@ -542,7 +577,7 @@
             flex-shrink: 0;
             width: 7px;
             height: 11px;
-            background: url('./img/svg/white-arrow.svg') center no-repeat;
+            background: url('./../img/svg/white-arrow.svg') center no-repeat;
             background-size: contain;
             transform: rotate(180deg);
         }
@@ -577,15 +612,19 @@
         }
 
         &-link {
-            padding: 20px;
-            font-size: 15px;
+            // padding: 20px;
+            // font-size: 15px;
+            padding: 15px;
+            font-size: 12px;
             line-height: 18px;
             color: #FFF;
             transition: color 0.3s;
 
             @include _1100 {
-                padding: 10px 0;
-                font-size: 12px;
+                // padding: 10px 0;
+                // font-size: 12px;
+                padding: 17px 0;
+                font-size: 16px;
             }
 
             &:hover {
