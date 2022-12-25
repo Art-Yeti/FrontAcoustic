@@ -126,22 +126,26 @@ function initAll() {
           });
     }
 
+    if(document.querySelector(".js-text-content-mainCarousel") !== null){
+        const mainCarousel = new Carousel(document.querySelector(".js-text-content-mainCarousel"), {
+            Dots: false,
+        });
+    
 
-    const mainCarousel = new Carousel(document.querySelector(".js-text-content-mainCarousel"), {
-        Dots: false,
-    });
-
-    const thumbCarousel = new Carousel(document.querySelector(".js-text-content-thumbCarousel"), {
-        Sync: {
-            target: mainCarousel,
-            friction: 0,
-        },
-        Dots: false,
-        Navigation: false,
-        center: true,
-        slidesPerPage: 1,
-        infinite: false,
-    });
+        if(document.querySelector(".js-text-content-thumbCarousel") !== null){
+            const thumbCarousel = new Carousel(document.querySelector(".js-text-content-thumbCarousel"), {
+                Sync: {
+                    target: mainCarousel,
+                    friction: 0,
+                },
+                Dots: false,
+                Navigation: false,
+                center: true,
+                slidesPerPage: 1,
+                infinite: false,
+            });
+        }
+    }
     
     Fancybox.bind('[data-fancybox="gallery"]', {
         Toolbar: false,

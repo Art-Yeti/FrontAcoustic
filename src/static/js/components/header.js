@@ -22,12 +22,13 @@ if (document.querySelector('.js-header-nav') !== null){
 
     addEvents();
 
-    document.addEventListener ('DOMNodeInserted', (event) => {
+    document.body.addEventListener ('DOMNodeInserted', (event) => {
+        if(event.target.classList){
+            if (event.target.classList.contains('js-header-nav')) {
+                
+                addEvents();
 
-        if (event.target.classList.contains('js-header-nav')) {
-            
-            addEvents();
-
+            }
         }
     }, false);
 
@@ -81,12 +82,14 @@ if (document.querySelector('.js-header-nav') !== null){
 
     addEvents_burger();
 
-    document.addEventListener ('DOMNodeInserted', (event) => {
+    document.body.addEventListener ('DOMNodeInserted', (event) => {
 
-        if (event.target.classList.contains(HEADER_BURGER_BTN)) {
-            
-            addEvents_burger();
+        if(event.target.classList){
+            if (event.target.classList.contains(HEADER_BURGER_BTN)) {
+                
+                addEvents_burger();
 
+            }
         }
     }, false);
 

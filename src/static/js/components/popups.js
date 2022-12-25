@@ -5,13 +5,17 @@ import changeMaskOnScroll from "../assets/_changeMaskOnScroll";
 
 addEvents();
 
-document.addEventListener ('DOMNodeInserted', (event) => {
+document.body.addEventListener ('DOMNodeInserted', (event) => {
 
-    if (event.target.classList.contains('js-popup')) {
-        
-        addEvents();
+    if(event.target.classList){
 
+        if (event.target.classList.contains('js-popup')) {
+            
+            addEvents();
+
+        }
     }
+    
 }, false);
 
 function addEvents(){

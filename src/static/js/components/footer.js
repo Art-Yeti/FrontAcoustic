@@ -2,12 +2,14 @@ import { OPEN_CLASS } from '../assets/_const'
 
 addEvents();
 
-document.addEventListener ('DOMNodeInserted', (event) => {
+document.body.addEventListener ('DOMNodeInserted', (event) => {
 
-    if (event.target.classList.contains('js-menu-tab')) {
-        
-        addEvents();
+    if(event.target.classList){
+        if (event.target.classList.contains('js-menu-tab')) {
+            
+            addEvents();
 
+        }
     }
 }, false);
 
